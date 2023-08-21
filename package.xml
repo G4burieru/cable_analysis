@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>cable_analysis</name>
+  <version>0.0.0</version>
+  <description>The cable_analysis package</description>
+
+  <maintainer email="gabs@todo.todo">gabs</maintainer>
+
+
+  <license>TODO</license>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>nodelet</depend>
+  <depend>tf</depend>
+  <depend>roscpp</depend>
+  <depend>image_transport</depend>
+  <depend>sensor_msgs</depend>
+  <depend>eigen</depend>
+  <depend>cv_bridge</depend>
+  <depend>nav_msgs</depend>  
+  <depend>genmsg</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>message_runtime</depend>
+  <depend>ddynamic_reconfigure</depend>
+  <depend>diagnostic_updater</depend>
+  <depend>librealsense2</depend>
+
+<export>
+  <!--The plugins.xml file defines nodelet as a plugin -->
+  <nodelet plugin="${prefix}/plugins.xml" />
+</export>
+</package>

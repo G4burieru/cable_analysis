@@ -1,0 +1,4 @@
+rate:
+  check_subscribers: 10 # [Hz]
+
+acceptable_interval_last_image: 3.0 # [s]
