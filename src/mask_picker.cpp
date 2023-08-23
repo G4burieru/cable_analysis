@@ -76,8 +76,8 @@ namespace cable_analysis
     const cv_bridge::CvImagePtr bridge_image_copy_ptr = cv_bridge::toCvCopy(msg, "bgr8");
 
     /* blur image to reduce the noise */
-    // cv::Mat img_blur;
-    // cv::medianBlur(bridge_image_copy_ptr->image, img_blur, 3);
+    cv::Mat img_blur;
+    cv::medianBlur(bridge_image_copy_ptr->image, img_blur, 3);
 
     /* convert image to HSV */
     cv::Mat img_hsv;

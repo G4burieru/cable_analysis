@@ -11,7 +11,7 @@ using namespace cv;
 int main(int argc, char** argv)
 {
  CommandLineParser parser(argc, argv, "{@input | cabos.png | input image}");
- Mat src = imread("/home/gabs/Pictures/50cm_d435i_Color.png");
+ Mat src = imread("/home/gabs/Pictures/50cm_d455.png");
  
  if (src.empty())
  {

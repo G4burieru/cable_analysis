@@ -47,6 +47,7 @@ public:
 
   void vertical_lines_extractor(cv::Mat img) {
 
+    RNG rng(12345);
     Mat src, src_gray;
     Mat dst, bw;
 
@@ -78,9 +79,22 @@ public:
     Mat kernel = Mat::ones(3, 3, CV_8UC1);
     dilate(dst, dst, kernel);
 
-    blur(dst, dst, Size(2, 2));
-
     imshow("vertical", dst);
+
+
+    vector<vector<Point>> contours;
+    vector<Vec4i> hierarchy;
+
+    findContours(dst, contours, hierarchy, RETR_TREE, CHAIN_APPROX_SIMPLE);
+
+    Mat drawing = Mat::zeros(dst.size(), CV_8UC3);
+    for (size_t i = 0; i < contours.size(); i++) {
+      Scalar color =
+          Scalar(rng.uniform(0, 256), rng.uniform(0,256), rng.uniform(0,256));
+      drawContours(drawing, contours, (int)i, color, 2, LINE_8, hierarchy, 0);
+    }
+    imshow("Contours", drawing);
+
     waitKey(1);
   }
 };

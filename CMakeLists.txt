@@ -23,6 +23,16 @@ include_directories(include
   ${OpenCV_INCLUDE_DIRS}
 )
 
+add_library(MaskPicker src/mask_picker.cpp)
+    add_dependencies(MaskPicker
+    ${${PROJECT_NAME}_EXPORTED_TARGETS}
+    ${catkin_EXPORTED_TARGETS}
+    )
+    target_link_libraries(MaskPicker
+    ${catkin_LIBRARIES}
+    ${OpenCV_LIBRARIES}
+    )
+
 add_executable(cv_bridge_node src/cv_bridge_node.cpp)
     target_link_libraries(cv_bridge_node
         ${catkin_LIBRARIES}
