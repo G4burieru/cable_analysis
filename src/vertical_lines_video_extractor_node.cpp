@@ -74,13 +74,10 @@ public:
     erode(dst, dst, verticalStructure, Point(-1, -1));
     dilate(dst, dst, verticalStructure, Point(-1, -1));
 
-    imshow("vertical_without_dilate", dst);
-
     Mat kernel = Mat::ones(3, 3, CV_8UC1);
     dilate(dst, dst, kernel);
 
     imshow("vertical", dst);
-
 
     vector<vector<Point>> contours;
     vector<Vec4i> hierarchy;

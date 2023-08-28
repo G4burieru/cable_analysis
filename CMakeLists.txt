@@ -62,3 +62,9 @@ add_executable(vertical_lines_video_extractor_node src/vertical_lines_video_extr
         ${catkin_LIBRARIES}
         ${OpenCV_LIBRARIES}
     )
+
+add_executable(countors_node src/countors_node.cpp)
+    target_link_libraries(countors_node
+        ${catkin_LIBRARIES}
+        ${OpenCV_LIBRARIES}
+    )
