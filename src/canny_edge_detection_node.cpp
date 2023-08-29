@@ -22,8 +22,7 @@ static void CannyThreshold(int, void*)
 }
 int main( int argc, char** argv )
 {
- CommandLineParser parser( argc, argv, "{@input | fruits.jpg | input image}" );
- src = imread( samples::findFile("/home/gabs/Pictures/50cm_d435i_Color.png")); // Load an image
+ src = imread( samples::findFile("cable_analysis/imgs/2.png")); // Load an image
  if( src.empty() )
  {
  std::cout << "Could not open or find the image!\n" << std::endl;

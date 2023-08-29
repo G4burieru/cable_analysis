@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 # Read the image
-image = cv2.imread('/home/gabs/Pictures/2.png')
+image = cv2.imread('cable_analysis/imgs/2.png')
 
 # Convert the image to grayscale
 gray_image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

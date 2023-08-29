@@ -10,7 +10,7 @@ RNG rng(12345);
 void thresh_callback(int, void* );
 int main( int argc, char** argv )
 {
- Mat src = imread( samples::findFile( "/home/gabs/Pictures/2.png") );
+ Mat src = imread( samples::findFile("cable_analysis/imgs/2.png") );
  if( src.empty() )
  {
  cout << "Could not open or find the image!\n" << endl;

@@ -10,7 +10,7 @@ using namespace cv;
 
 int main(int argc, char **argv) {
   CommandLineParser parser(argc, argv, "{@input | cabos.png | input image}");
-  Mat src = imread("/home/gabs/Pictures/2.png");
+  Mat src = imread("cable_analysis/imgs/2.png");
 
   if (src.empty()) {
     cout << "Could not open or find the image!\n" << endl;
