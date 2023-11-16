@@ -1,0 +1,2 @@
+[console_scripts]
+ifm3dpy = ifm3dpy:_run_cmdtool
